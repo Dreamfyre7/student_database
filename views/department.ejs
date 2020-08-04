@@ -1,0 +1,25 @@
+<%- include ('./partials/header') %>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Dayananda Sagar College Of Engineering</h1>
+            <p>Get all the info about our respective departments here</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row row-cols-3" style="margin:30px">
+            <%department.forEach(function(department){%>
+                <div class="col-sm-4">
+                    <div class="card" style="margin-top:20px">
+                        <img class="card-img-top" src="<%=department.image%>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"><%=department.name%></h5>
+                            <p class="card-text">HOD<span style="margin:40px"><%=department.hod%></span></p>
+                            <a href="/department/<%=department._id%>" class="btn btn-primary">view department</a>
+                        </div>
+                    </div>
+                </div>
+            <%})%>
+        </div>
+    </div>
+</div>

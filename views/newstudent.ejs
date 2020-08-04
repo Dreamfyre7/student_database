@@ -1,0 +1,147 @@
+<%- include ('./partials/header') %>
+<h1 style="text-align:center;margin-top:20px;">Add a new student</h1>
+<p><h2 style="background-color: rgb(226, 241, 241);margin-left:25px;margin-right:25px;">Personal Details</h2></p>
+
+<form action="/students" method="post">
+
+    <div class="row" style="margin:10px">
+        <div class="col">
+            <input type="text" class="form-control" name="name" placeholder="name" required>
+        </div>
+        <div class="col">
+            <input type="number" name="age"class="form-control" placeholder="age" required>
+        </div>
+        <div class="col">
+            <input type="date" name="dob"class="form-control" placeholder="Date of birth" required>
+        </div>
+        <div class="col">
+            <input type="number" name="num"class="form-control" placeholder="contact number" maxlength="10" required>
+        </div>
+        <div class="col">
+            <input type="email" name="email"class="form-control" placeholder="email id" required>
+        </div>
+        <div class="col">
+            <input type="text" name="gender"class="form-control" placeholder="gender" required>
+        </div>  
+    </div>
+
+    <div class="row" style="margin:10px;">
+        <div class="col">
+            <input type="text" class="form-control" name="country" placeholder="Country" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="state" placeholder="State" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="city" placeholder="City" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="area" placeholder="Locality/area" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="landmark" placeholder="Landmark" required>
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" name="pincode" placeholder="Pincode" required>
+        </div>
+    </div>
+
+    <div class="row" style="margin:10px;width:16.5%">
+        <div class="col">
+            <input type="text" class="form-control" name="image" placeholder="Image Url" required>
+        </div>
+    </div>
+
+    <p><h2 style="background-color: rgb(226, 241, 241);margin-left:25px;margin-right:25px;">Parents Details</h2></p>
+
+    <div class="row" style="margin:10px;">
+        <div class="col">
+            <input type="text" class="form-control" name="fname" placeholder="Father name" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="mname" placeholder="Mother name" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="gname" placeholder="Guardian name" required>
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" name="gnum" placeholder="Contact number" required>
+        </div>
+        <div class="col">
+            <input type="email" class="form-control" name="gemail" placeholder="email id" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="degree" placeholder="degree" required>
+        </div>
+    </div>
+
+    <div class="row" style="margin:10px;width:33%">
+        <div class="col">
+            <input type="text" class="form-control" name="occupation" placeholder="occupation" required>
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" name="income" placeholder="Annual income" required>
+        </div>
+    </div>
+
+    <p><h2 style="background-color: rgb(226, 241, 241);margin-left:25px;margin-right:25px;">Academic Details</h2></p>
+
+    <div class="row" style="margin:10px;">
+        <div class="col">
+            <input type="number" name="marks10"class="form-control" placeholder="10th %" required>
+        </div>
+        <div class="col">
+            <input type="text" name="school10"class="form-control" placeholder="10th school" required>
+        </div>
+        <div class="col">
+            <input type="text" name="board10"class="form-control" placeholder="10th board" required>
+        </div>
+        <div class="col">
+            <input type="number" name="py10"class="form-control" placeholder="10th passing year" required>
+        </div>
+        <div class="col">
+            <input type="number" name="marks12"class="form-control" placeholder="12th %" required>
+        </div>
+        <div class="col">
+            <input type="text" name="school12"class="form-control" placeholder="12th school" required>
+        </div>    
+    </div>
+
+    <div class="row" style="margin:10px;width:33%">
+        <div class="col">
+            <input type="text" name="board12"class="form-control" placeholder="12th board" required>
+        </div>
+        <div class="col">
+            <input type="number" name="py12"class="form-control" placeholder="12th passing year" required>
+        </div>
+    </div>
+
+    <p><h2 style="background-color: rgb(226, 241, 241);margin-left:25px;margin-right:25px;">College Details</h2></p>
+
+    <div class="row" style="margin:10px;width:66%">
+        <div class="col">
+            <input type="text" name="usn"class="form-control" placeholder="usn" required>
+        </div>
+        <div class="col">
+            <select class="form-control" name="department" required>
+                <option>Choose Your Branch</option>
+                <%department.forEach(function(department){%>
+                    <option><%=department.name%></option>
+                <%})%>
+            </select>
+        </div>
+        <div class="col">
+            <input type="Number" name="sem"class="form-control" placeholder="sem" required>
+        </div>
+        <div class="col">
+            <input type="number" name="roll" class="form-control" placeholder="roll" required>
+        </div>
+    </div>
+
+    <div class="row" style="margin-left:40%; margin-top:20px;width:15%">
+        <div class="col">
+            <input type="submit" class="btn btn-primary btn-block">
+        </div>
+    </div>
+
+</form>

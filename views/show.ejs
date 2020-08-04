@@ -1,0 +1,159 @@
+<%- include ('./partials/header') %>
+
+    <h1 style="margin:30px;text-align:center;"><i><span style="background-color:rgb(233, 236, 236);"><%=student.name%>'s info</span></i></h1>
+    <div class="row" style="margin-left:30px">
+        <div class="col-9">
+            <div class="row">
+                <table class="s">
+                    <tr><th colspan="6"><center>Personal Details</center></th></tr>
+                        <tr>
+                            <td >Name</td>
+                            <td><%=student.name%></td>
+                            <td>Age</td>
+                            <td><%=student.age%></td>
+                            <td>Date of Birth</td>
+                            <td><%=student.dob.toDateString()%></td>
+                        </tr>
+                        <tr>
+                            <td>Contact no.</td>
+                            <td><%=student.num%></td>
+                            <td>Email id</td>
+                            <td><%=student.email%></td>
+                            <td>Gender</td>
+                            <td><%=student.gender%></td>
+                        </tr>
+                        <tr>
+                            <td>Country</td>
+                            <td><%=student.country%></td>
+                            <td>State</td>
+                            <td><%=student.state%></td>
+                            <td>City</td>
+                            <td><%=student.city%></td>
+                        </tr>
+                        <tr>
+                            <td>Locality</td>
+                            <td><%=student.area%></td>
+                            <td>Landmark</td>
+                            <td><%=student.landmark%></td>
+                            <td>Pincode</td>
+                            <td><%=student.pincode%></td>
+                        </tr>
+                        <tr><th colspan="6"><center>Parents Details</center></th></tr>
+                        <tr>
+                            <td>Father's Name</td>
+                            <td><%=student.fname%></td>
+                            <td>Mother's Name</td>
+                            <td><%=student.mname%></td>
+                            <td>Guardian Name</td>
+                            <td><%=student.gname%></td>
+                        </tr>
+                        <tr>
+                            <td>Contact no.</td>
+                            <td><%=student.gnum%></td>
+                            <td>Email id</td>
+                            <td><%=student.gemail%></td>
+                            <td>Degree</td>
+                            <td><%=student.degree%></td>
+                        </tr>
+                        <tr>
+                            <td>Occupation</td>
+                            <td><%=student.occupation%></td>
+                            <td>Annual income</td>
+                            <td>Rs <%=student.income%></td>
+                        </tr>
+                        <tr><th colspan="6"><center>Academic Details</center></th></tr>
+                        <tr>
+                            <td>10th Marks</td>
+                            <td><%=student.marks10%>%</td>
+                            <td>10th School</td>
+                            <td><%=student.school10%></td>
+                            <td>10th Board</td>
+                            <td><%=student.board10%></td>
+                        </tr>
+                        <tr>
+                            <td>10th Passing Year</td>
+                            <td><%=student.py10%></td>
+                            <td>12th Marks</td>
+                            <td><%=student.marks12%>%</td>
+                            <td>12th School</td>
+                            <td><%=student.school12%></td>
+                        </tr>
+                        <tr>
+                            <td>12th Board</td>
+                            <td><%=student.board12%></td>
+                            <td>12th Passing Year</td>
+                            <td><%=student.py12%></td>
+                        </tr>
+                        <tr><th colspan="6"><center>College Details</center></th></tr>
+                        <tr>
+                            <td>USN</td>
+                            <td><%=student.usn%></td>
+                            <td>Department</td>
+                            <td><%=student.branch.name%></td>
+                            <td>Semester</td>
+                            <td><%=student.sem%></td>
+                        </tr>
+                        <tr>
+                            <td>Roll</td>
+                            <td><%=student.roll%></td>
+                        </tr>
+                        <tr><th colspan="6"><center>Courses</center></th></tr>
+                        <tr>
+                            <th>NO.</th>
+                            <th>Course Name</th>
+                            <th>Course Code</th>
+                            <th>Course credit</th>
+                            <th>Faculty</th>
+                            <th>Duration</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><%=student.course.course1.name%></td>
+                            <td><%=student.course.course1.code%></td>
+                            <td><%=student.course.course1.credit%></td>
+                            <td><%=student.course.course1.faculty%></td>
+                            <td><%=student.course.course1.duration%> hr</td>
+
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><%=student.course.course2.name%></td>
+                            <td><%=student.course.course2.code%></td>
+                            <td><%=student.course.course2.credit%></td>
+                            <td><%=student.course.course2.faculty%></td>
+                            <td><%=student.course.course2.duration%> hr</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><%=student.course.course3.name%></td>
+                            <td><%=student.course.course3.code%></td>
+                            <td><%=student.course.course3.credit%></td>
+                            <td><%=student.course.course3.faculty%></td>
+                            <td><%=student.course.course3.duration%> hr</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><%=student.course.course4.name%></td>
+                            <td><%=student.course.course4.code%></td>
+                            <td><%=student.course.course4.credit%></td>
+                            <td><%=student.course.course4.faculty%></td>
+                            <td><%=student.course.course4.duration%> hr</td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-3" style="width: 71%;">
+            <div class="row">
+                <div class="col">
+                    <img src="<%=student.image%>" style="width:250px;height:268px;border:1px solid black">
+                </div>
+            </div>
+                
+            <div class="row">
+                <a class="btn btn-primary btn-block" style="margin:10px; width:38%" href="/student/<%=student._id%>/edit">Edit info</a>
+                <form id="deleteform"action="/student/<%=student._id%>?_method=delete" method="post">
+                    <input type="submit" class="btn btn-xs btn-danger" value="delete" style="margin-top:10px;width:146%">
+                </form>
+            </div>
+        </div>   
+    </div>

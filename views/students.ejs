@@ -1,0 +1,23 @@
+<%- include ('./partials/header') %>
+<div class="container">
+    <div style="margin-top:20px;">
+        <p style="text-align: center;color:rgb(5, 5, 37);font-weight:700;font-size:26px;"><i><span style="background-color:rgb(233, 233, 236);"><%=category%> <%=result%></span></i></p>
+    </div>
+    <table id="content" style="margin-top:40px;">
+        <tr><th colspan="6" style="padding:20px;font-size:24px;background-color: rgb(184, 230, 230);"><center>Student Database</center></th></tr>
+        <tr>
+            <th>Name</th>
+            <th>USN</th>
+            <th>Department</th>
+            <th>Sem</th>
+        </tr>
+        <%students.forEach(function(students){%>
+            <tr title="click to view more about <%=students.name%>">
+                <td><a href="/student/<%=students._id%>"><%=students.name%></a></td>
+                <td><%=students.usn%></td>
+                <td><%=students.branch.name%></td>
+                <td><%=students.sem%></td>
+             </tr> 
+        <%})%>
+    </table>
+</div>

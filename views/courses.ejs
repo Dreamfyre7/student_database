@@ -1,0 +1,33 @@
+<%- include ('./partials/header') %>
+<div class="container">
+    <table style="margin-top: 40px;">
+        <tr><th colspan="6" style="padding:10px;font-size:26px;background-color: rgb(184, 230, 230);"><center>Courses</center></th></tr>
+        <%department.forEach(function(department){%>
+            <tr><th colspan="6" style="padding:15px"><center><%=department.name%></center></th></tr>
+            <tr>
+                <th>SEM</th>
+                <th>COURSE1</th>
+                <th>COURSE2</th>
+                <th>COURSE3</th>
+                <th>COURSE4</th>
+            </tr>
+            <%course.forEach(function(course){%>
+                <% if (department.name===course.branch.name){%>
+                    <tr>
+                    <td rowspan="2" style="text-align: center;"><%=course.sem%></td>
+                    <td><a href="/course/<%=course.course1.name%>/<%=course._id%>"><%=course.course1.name%></a></td>
+                    <td><a href="/course/<%=course.course2.name%>/<%=course._id%>"><%=course.course2.name%></a></td>
+                    <td><a href="/course/<%=course.course3.name%>/<%=course._id%>"><%=course.course3.name%></a></td>
+                    <td><a href="/course/<%=course.course4.name%>/<%=course._id%>"><%=course.course4.name%></a></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgb(216,240,240);"><%=course.course1.faculty%></td>
+                        <td style="background-color: rgb(216,240,240);"><%=course.course2.faculty%></td>
+                        <td style="background-color: rgb(216,240,240);"><%=course.course3.faculty%></td>
+                        <td style="background-color: rgb(216,240,240);"><%=course.course4.faculty%></td>
+                        </tr>
+                <%}%>
+            <%})%>
+        <%})%>
+    </table>
+</div>

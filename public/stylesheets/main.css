@@ -1,0 +1,19 @@
+table,th,td{
+    border:1px solid black;
+    width:1100px;
+    padding: 10px;
+}
+.s td:nth-of-type(even) {
+    background:rgb(216, 240, 240);
+}
+#deleteform{
+    display: inline;
+}
+
+th{
+    text-align: center;
+}
+
+.card-img-top{
+    height:193px;
+}

@@ -1,0 +1,21 @@
+<%- include ('./partials/header') %>
+
+<div class="container">
+    <h1 style="margin:50px 170px">Students in <%=name%> course</h1>
+    <table id="content">
+        <tr>
+            <th>Name</th>
+            <th>USN</th>
+            <th>Department</th>
+            <th>Roll</th>
+        </tr>
+        <%course.students.forEach(function(students){%>
+            <tr title="click to view more about <%=students.name%>">
+                <td><a href="/student/<%=students._id%>"><%=students.name%></a></td>
+                <td><%=students.usn%></td>
+                <td><%=students.branch.name%></td>
+                <td><%=students.roll%></td>
+             </tr> 
+        <%})%>
+    </table>
+</div>

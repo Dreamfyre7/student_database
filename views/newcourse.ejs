@@ -1,0 +1,122 @@
+<%- include ('./partials/header') %>
+<div class="container">
+    <h1 style="text-align:center;margin-top:50px">create a new course set</h1>
+    <div class="row">
+        <div style="width:30%;">
+            <form action="/course" method="post">
+                <div class=" form-group">
+                    <select class="form-control" name="department" required style="margin:auto 400px;">
+                        <option>Choose Your Branch</option>
+                            <%department.forEach(function(department){%>
+                                <option><%=department.name%></option>
+                            <%})%>
+                    </select>
+                </div>
+                <div class=" form-group">
+                    <input class="form-control"type="number" name="sem"placeholder="sem" required style="margin:auto 400px;">
+                </div>
+                <hr style="width:320%">
+                <div class=" form-group">
+                    <div class="row" style="margin:auto 210px ;width:210%">
+                        <div class="col">
+                            <input class="form-control"type="text" name="course1"placeholder="course name" required>
+                        </div>
+                        <div class="col">
+                            <input class="form-control"type="text" name="course1code"placeholder="course code" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row" style="margin:auto 210px;width:210%">
+                        <div class="col">
+                            <input class="form-control"type="number" name="course1credit"placeholder="course credit" required>
+                        </div>
+                        <div class="col">
+                            <input class="form-control"type="text" name="course1faculty"placeholder="course faculty" required>
+                        </div>
+                        <div class="col">
+                            <input class="form-control"type="number" name="course1duration"placeholder="course duration" required>
+                        </div>
+                    </div>
+                </div>
+                <hr style="width:320%">
+                <div class=" form-group">
+                    <div class="row" style="margin:auto 210px ;width:210%">
+                        <div class="col">
+                            <input class="form-control"type="text" name="course2"placeholder="course name" required>
+                        </div>
+                        <div class="col">
+                            <input class="form-control"type="text" name="course2code"placeholder="course code" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row" style="margin:auto 210px;width:210%">
+                        <div class="col">
+                            <input class="form-control"type="number" name="course2credit"placeholder="course credit" required>
+                        </div>
+                        <div class="col">
+                            <input class="form-control"type="text" name="course2faculty"placeholder="course faculty" required>
+                        </div>
+                        <div class="col">
+                            <input class="form-control"type="number" name="course2duration"placeholder="course duration" required>
+                        </div>
+                    </div>
+                </div>
+                <hr style="width:320%">
+                <div class=" form-group">
+                    <div class="row" style="margin:auto 210px ;width:210%">
+                        <div class="col">
+                            <input class="form-control"type="text" name="course3"placeholder="course name" required>
+                        </div>
+                        <div class="col">
+                            <input class="form-control"type="text" name="course3code"placeholder="course code" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row" style="margin:auto 210px;width:210%">
+                        <div class="col">
+                            <input class="form-control"type="number" name="course3credit"placeholder="course credit" required>
+                        </div>
+                        <div class="col">
+                            <input class="form-control"type="text" name="course3faculty"placeholder="course faculty" required>
+                        </div>
+                        <div class="col">
+                            <input class="form-control"type="number" name="course3duration"placeholder="course duration" required>
+                        </div>
+                    </div>
+                </div>
+                <hr style="width:320%">
+                <div class=" form-group">
+                    <div class="row" style="margin:auto 210px ;width:210%">
+                        <div class="col">
+                            <input class="form-control"type="text" name="course4"placeholder="course name" required>
+                        </div>
+                        <div class="col">
+                            <input class="form-control"type="text" name="course4code"placeholder="course code" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row" style="margin:auto 210px;width:210%">
+                        <div class="col">
+                            <input class="form-control"type="number" name="course4credit"placeholder="course credit" required>
+                        </div>
+                        <div class="col">
+                            <input class="form-control"type="text" name="course4faculty"placeholder="course faculty" required>
+                        </div>
+                        <div class="col">
+                            <input class="form-control"type="number" name="course4duration"placeholder="course duration" required>
+                        </div>
+                    </div>
+                </div>
+                <div class=" form-group">
+                    <div class="row" style="margin:auto 210px;width:210%">
+                        <button class="btn btn-lg btn-primary btn-block">submit</button>
+                    </div>    
+                </div>    
+            </form>
+        </div>
+    </div>
+</div>

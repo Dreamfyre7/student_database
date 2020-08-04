@@ -1,0 +1,136 @@
+<%- include ('./partials/header') %>
+<h1 style="text-align:center;margin-top:20px;">Edit Page</h1>
+<p><h2 style="background-color: rgb(226, 241, 241);margin-left:25px;margin-right:25px;">Personal Details</h2></p>
+
+<form action="/student/<%=student._id%>?_method=put" method="post">
+
+    <div class="row" style="margin:10px">
+        <div class="col">
+            <input type="text" class="form-control" name="s[name]" value="<%=student.name%>" required>
+        </div>
+        <div class="col">
+            <input type="number" name="s[age]"class="form-control" value="<%=student.age%>" required>
+        </div>
+        <div class="col">
+            <input type="number" name="s[num]"class="form-control" value="<%=student.num%>" required>
+        </div>
+        <div class="col">
+            <input type="email" name="s[email]"class="form-control" value="<%=student.email%>" required>
+        </div>
+        <div class="col">
+            <input type="text" name="s[gender]"class="form-control" value="<%=student.gender%>" required>
+        </div>  
+    </div>
+
+    <div class="row" style="margin:10px;">
+        <div class="col">
+            <input type="text" class="form-control" name="s[country]" value="<%=student.country%>" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="s[state]" value="<%=student.state%>" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="s[city]" value="<%=student.city%>" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="s[area]" value="<%=student.area%>" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="s[landmark]" value="<%=student.landmark%>" required>
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" name="s[pincode]" value="<%=student.pincode%>" required>
+        </div>
+    </div>
+
+    <div class="row" style="margin:10px;width:16.5%">
+        <div class="col">
+            <input type="text" class="form-control" name="s[image]" value="<%=student.image%>" required>
+        </div>
+    </div>
+
+    <p><h2 style="background-color: rgb(226, 241, 241);margin-left:25px;margin-right:25px;">Parents Details</h2></p>
+
+    <div class="row" style="margin:10px;">
+        <div class="col">
+            <input type="text" class="form-control" name="s[fname]" value="<%=student.fname%>" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="s[mname]" value="<%=student.mname%>" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="s[gname]" value="<%=student.gname%>" required>
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" name="s[gnum]" value="<%=student.gnum%>" required>
+        </div>
+        <div class="col">
+            <input type="email" class="form-control" name="s[gemail]" value="<%=student.gemail%>" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="s[degree]" value="<%=student.degree%>" required>
+        </div>
+    </div>
+
+    <div class="row" style="margin:10px;width:33%">
+        <div class="col">
+            <input type="text" class="form-control" name="s[occupation]" value="<%=student.occupation%>" required>
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" name="s[income]" value="<%=student.income%>" required>
+        </div>
+    </div>
+
+    <p><h2 style="background-color: rgb(226, 241, 241);margin-left:25px;margin-right:25px;">Academic Details</h2></p>
+
+    <div class="row" style="margin:10px;">
+        <div class="col">
+            <input type="number" name="s[marks10]"class="form-control" value="<%=student.marks10%>" required>
+        </div>
+        <div class="col">
+            <input type="text" name="s[school10]"class="form-control" value="<%=student.school10%>" required>
+        </div>
+        <div class="col">
+            <input type="text" name="s[board10]"class="form-control" value="<%=student.board10%>" required>
+        </div>
+        <div class="col">
+            <input type="number" name="s[py10]"class="form-control" value="<%=student.py10%>" required>
+        </div>
+        <div class="col">
+            <input type="number" name="s[marks12]"class="form-control" value="<%=student.marks12%>" required>
+        </div>
+        <div class="col">
+            <input type="text" name="s[school12]"class="form-control" value="<%=student.school12%>" required>
+        </div>    
+    </div>
+
+    <div class="row" style="margin:10px;width:33%">
+        <div class="col">
+            <input type="text" name="s[board12]"class="form-control" value="<%=student.board12%>" required>
+        </div>
+        <div class="col">
+            <input type="number" name="s[py12]"class="form-control" value="<%=student.py12%>" required>
+        </div>
+    </div>
+
+    <p><h2 style="background-color: rgb(226, 241, 241);margin-left:25px;margin-right:25px;">College Details</h2></p>
+
+    <div class="row" style="margin:10px;width:66%">
+        <div class="col">
+            <input type="text" name="s[usn]"class="form-control" value="<%=student.usn%>" required>
+        </div>
+        <div class="col">
+            <input type="Number" name="s[sem]"class="form-control" value="<%=student.sem%>" required>
+        </div>
+        <div class="col">
+            <input type="number" name="s[roll]" class="form-control" value="<%=student.roll%>" required>
+        </div>
+    </div>
+
+    <div class="row" style="margin-left:40%; margin-top:20px;width:15%">
+        <div class="col">
+            <input type="submit" class="btn btn-primary btn-block">
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Student Database</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+        <style>
+            body{
+                background-image: url("https://media3.giphy.com/media/fw8uZriJW4TlhmZnUj/giphy.gif?cid=ecf05e47699570edcc4b453390101458cdcae5f775559aab&rid=giphy.gif");
+                background-repeat: no-repeat;
+                background-size: cover;;
+            }
+        </style>
+    </head>
+        <body>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+
+                    <% if(currentuser){ %>
+
+                    <!-- <li class="nav-item active">
+                      <a class="nav-link" href="/newdepartment">Add Departments<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/newcourse">Add Course<span class="sr-only">(current)</span></a>
+                    </li> -->
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/students">ALL Students</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/new">Add new Student</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/department">Departments<span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/course">courses</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <form action="/students" method="get" class="form-inline">
+                        <div class="form-group">
+                            <input type="text" name="search" placeholder="search by name or USN" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="sort" placeholder="pick a category">
+                                <option value="" selected>sort by</option>
+                                <option>name</option>
+                                <option>usn</option>
+                                <option>roll</option>
+                                <!-- <option>By the Lake or River</option>
+                                <option>By the Beach</option>
+                                <option>Snowy Place</option>
+                                <option>Night views</option>
+                                <option>Desert</option>
+                                <option>Other</option> -->
+                            </select>
+                            <input type="submit" value="search" class="btn btn-default">
+                        </div>
+                    </form>
+                    </li>
+                    
+                    
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/logout">logout</a>
+                    </li>
+                  </ul>
+                  <%} else { %>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/students"> ALL Students</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/new">Add new Student</a>
+                    </li>
+                    <!-- <li class="nav-item active">
+                      <a class="nav-link" href="/newdepartment">Add Departments<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/newcourse">Add Course<span class="sr-only">(current)</span></a>
+                    </li> -->
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/department">Departments<span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/course">courses</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <form action="/students" method="get" class="form-inline">
+                        <div class="form-group">
+                            <input type="text" name="search" placeholder="search by name or USN" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="sort" placeholder="pick a category">
+                                <option value="" selected>sort by</option>
+                                <option>name</option>
+                                <option>usn</option>
+                                <option>sem</option>
+                                <option>department</option>
+                            </select>
+                            <input type="submit" value="search" class="btn btn-default">
+                        </div>
+                    </form>
+                    </li>
+                    
+                    
+                  </ul>
+                  <%}%>
+                </div>
+              </nav>
+              <div class="container" style="margin:20px 200px 20px 200px">
+            <%if(error && error.length>0){%>
+                <div class="alert alert-danger"><%=error%></div>
+            <%}%>
+            <%if(success && success.length>0){%>    
+                <div class="alert alert-success"><%=success%></div>
+            <%}%>
+        </div>
+       
+<div class="container">
+    <h1 style="text-align:center;margin-top:200px;color:white">Login the student database</h1>
+    <div class="row">
+        <div style="width:30%; margin:30px auto">
+            <form action="/login" method="post">
+                <div class=" form-group">
+                    <input class="form-control" type="text" name="username"placeholder="name" required>
+                </div>
+                <div class=" form-group">
+                    <input class="form-control"type="password" name="password"placeholder="password" required>
+                </div>
+                <div class=" form-group">
+                    <button class="btn btn-lg btn-primary btn-block">submit</button>
+                </div>    
+            </form>
+        </div>
+    </div>
+</div>
